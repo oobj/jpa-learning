@@ -2,16 +2,25 @@ package br.com.oobj.servico;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import br.com.oobj.entidade.Funcionario;
 
+@Stateless
 public class FuncionarioServico {
 
+	@PersistenceContext
 	private EntityManager em;
 
 	public FuncionarioServico(EntityManager em) {
+		this.em = em;
+	}
+	
+	@Deprecated
+	public FuncionarioServico() {
 		this.em = em;
 	}
 	
