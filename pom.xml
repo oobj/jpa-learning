@@ -7,6 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProjetoJPA</name>
 	<description>Projeto JPA</description>
+	<packaging>war</packaging>
 
 	<dependencies>
 		<!-- Hibernate e JPA -->
@@ -33,5 +34,17 @@
 			<version>7.0</version>
 		</dependency>
 	</dependencies>
-	<packaging>war</packaging>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
